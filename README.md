@@ -1,8 +1,10 @@
 # AI Industry Revenue & Headcount Landscape (2025–2026)
 
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Market Analysis](https://img.shields.io/badge/Market%20Analysis-AI%20Stack%202025--2026-brightgreen.svg)](#)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-orange.svg)](#contributing)
+<a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
 A comprehensive benchmark and economic analysis of the global Artificial Intelligence (AI) industry value chain across **2025–2026**, covering revenue trajectories, workforce headcount, job creation, and productivity metrics (**revenue per employee**) across each layer of the modern AI stack.
 
@@ -78,6 +80,21 @@ Contributions, updates, and data revisions are welcome!
 3. Commit your updates with verifiable industry sources (`git commit -m 'Add updated market sizing data'`).
 4. Push to the branch (`git push origin feature/data-update`).
 5. Open a Pull Request.
+
+---
+
+## 💖 Support & Sponsorship
+
+Thank you for visiting and exploring this project! If you find this data or benchmark useful, please consider:
+- ⭐ **Starring** the repository to stay updated on future releases.
+- 🍴 **Forking** and contributing additional sector metrics or data points.
+- 📢 **Sharing** with your network, team, or research community.
+- ☕ **Buying a coffee / sponsoring** the project via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007). Your support helps keep this research and landscape analysis continuously updated!
+
+---
+
+##  Star History
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/AI-Revenue-Headcount-Landscape&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/AI-Revenue-Headcount-Landscape&type=date&legend=top-left)
 
 ---
 
