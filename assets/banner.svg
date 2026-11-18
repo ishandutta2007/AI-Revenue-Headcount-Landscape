@@ -1,0 +1,273 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#05070e" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <linearGradient id="accentPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="accentGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="30%" stop-color="#818cf8" />
+      <stop offset="70%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+
+    <!-- Glowing Line Gradients -->
+    <linearGradient id="glowLineGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.1" />
+    </linearGradient>
+    <linearGradient id="glowLineGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Area Chart Gradient -->
+    <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.8" stroke-opacity="0.5" />
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="strongGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      /* CSS Keyframe Animations */
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.65; transform: scale(1.04); }
+      }
+      @keyframes floatSlow1 {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
+      }
+      @keyframes floatSlow2 {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(6px); }
+      }
+      @keyframes waveMotion1 {
+        0% { transform: translateX(0px); }
+        50% { transform: translateX(-40px); }
+        100% { transform: translateX(0px); }
+      }
+      @keyframes waveMotion2 {
+        0% { transform: translateX(0px); }
+        50% { transform: translateX(35px); }
+        100% { transform: translateX(0px); }
+      }
+      @keyframes barGrow {
+        0%, 100% { transform: scaleY(1); }
+        50% { transform: scaleY(1.15); }
+      }
+      @keyframes pingDot {
+        0% { r: 3; opacity: 1; }
+        50% { r: 6; opacity: 0.5; }
+        100% { r: 3; opacity: 1; }
+      }
+      @keyframes beamSlide {
+        0% { stroke-dashoffset: 600; }
+        100% { stroke-dashoffset: -600; }
+      }
+
+      .pulse-bg {
+        animation: pulseGlow 8s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .anim-wave1 {
+        animation: waveMotion1 14s ease-in-out infinite;
+      }
+      .anim-wave2 {
+        animation: waveMotion2 18s ease-in-out infinite;
+      }
+      .card-float1 {
+        animation: floatSlow1 6s ease-in-out infinite;
+      }
+      .card-float2 {
+        animation: floatSlow2 7s ease-in-out infinite;
+      }
+      .card-float3 {
+        animation: floatSlow1 8s ease-in-out infinite;
+      }
+      .bar-anim {
+        transform-origin: bottom;
+        animation: barGrow 5s ease-in-out infinite;
+      }
+      .dot-ping {
+        animation: pingDot 3s ease-in-out infinite;
+      }
+      .data-stream {
+        stroke-dasharray: 80 120;
+        animation: beamSlide 7s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Cyber Grid Background -->
+  <rect width="1200" height="420" rx="16" fill="url(#cyberGrid)" />
+
+  <!-- Ambient Glow Orbs in Background -->
+  <circle cx="200" cy="90" r="140" fill="#38bdf8" opacity="0.12" filter="url(#strongGlow)" class="pulse-bg" />
+  <circle cx="1020" cy="140" r="160" fill="#c084fc" opacity="0.14" filter="url(#strongGlow)" class="pulse-bg" />
+  <circle cx="600" cy="360" r="180" fill="#6366f1" opacity="0.1" filter="url(#strongGlow)" class="pulse-bg" />
+
+  <!-- Dynamic Market Trends / Wave Graph in Lower Half -->
+  <g opacity="0.75">
+    <!-- Area Fill Under Trendline -->
+    <path class="anim-wave1" d="M -50 370 Q 150 280, 320 330 T 680 290 T 1000 240 T 1280 220 L 1280 420 L -50 420 Z" fill="url(#areaGrad)" />
+    <!-- Secondary Wave -->
+    <path class="anim-wave2" d="M -60 360 Q 180 320, 380 350 T 740 280 T 1050 260 T 1280 230" fill="none" stroke="url(#glowLineGrad2)" stroke-width="2.5" />
+    <!-- Primary Glowing Trendline -->
+    <path class="anim-wave1" d="M -50 370 Q 150 280, 320 330 T 680 290 T 1000 240 T 1280 220" fill="none" stroke="url(#glowLineGrad1)" stroke-width="3.5" filter="url(#softGlow)" />
+    <!-- Animated Light Stream along trend -->
+    <path class="anim-wave1 data-stream" d="M -50 370 Q 150 280, 320 330 T 680 290 T 1000 240 T 1280 220" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.6" />
+  </g>
+
+  <!-- Interactive Data Nodes & Pulsing Points -->
+  <g opacity="0.85">
+    <circle cx="340" cy="335" r="4.5" fill="#38bdf8" class="dot-ping" />
+    <circle cx="340" cy="335" r="9" fill="none" stroke="#38bdf8" opacity="0.4" />
+    <circle cx="680" cy="290" r="5" fill="#818cf8" class="dot-ping" />
+    <circle cx="680" cy="290" r="11" fill="none" stroke="#818cf8" opacity="0.4" />
+    <circle cx="980" cy="245" r="5" fill="#c084fc" class="dot-ping" />
+    <circle cx="980" cy="245" r="11" fill="none" stroke="#c084fc" opacity="0.4" />
+  </g>
+
+  <!-- Top Decorative Metric Cards (Floating Behind Text Margins) -->
+  <!-- Left Metric Card: 2026E Market Size -->
+  <g class="card-float1" transform="translate(60, 42)">
+    <rect width="180" height="74" rx="12" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1.2" />
+    <rect width="4" height="36" x="0" y="19" rx="2" fill="url(#accentCyan)" />
+    <text x="20" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="1">AI STACK 2026E</text>
+    <text x="20" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" fill="#38bdf8">$430B+</text>
+    <text x="110" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#10b981">▲ 48%</text>
+  </g>
+
+  <!-- Right Metric Card 1: Revenue Per Employee -->
+  <g class="card-float2" transform="translate(960, 42)">
+    <rect width="180" height="74" rx="12" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1.2" />
+    <rect width="4" height="36" x="0" y="19" rx="2" fill="url(#accentPurple)" />
+    <text x="20" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="1">MAX REV / HEAD</text>
+    <text x="20" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" fill="#c084fc">~$10M</text>
+    <text x="105" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Non-API</text>
+  </g>
+
+  <!-- Right Metric Card 2: Global Workforce -->
+  <g class="card-float3" transform="translate(960, 130)">
+    <rect width="180" height="74" rx="12" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1.2" />
+    <rect width="4" height="36" x="0" y="19" rx="2" fill="url(#accentGreen)" />
+    <text x="20" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="1">AGENT WORKFORCE</text>
+    <text x="20" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" fill="#34d399">1.10M+</text>
+    <text x="110" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Jobs</text>
+  </g>
+
+  <!-- Left Mini Chart / Bars -->
+  <g class="card-float3" transform="translate(60, 130)">
+    <rect width="180" height="74" rx="12" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1.2" />
+    <text x="20" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="1">CAPEX EXPANSION</text>
+    <!-- Dynamic Bar Graphics -->
+    <g transform="translate(20, 36)">
+      <rect x="0" y="14" width="12" height="16" rx="3" fill="#334155" />
+      <rect x="20" y="10" width="12" height="20" rx="3" fill="#3b82f6" />
+      <rect x="40" y="6" width="12" height="24" rx="3" fill="#6366f1" />
+      <rect x="60" y="2" width="12" height="28" rx="3" fill="#818cf8" />
+      <rect x="80" y="0" width="12" height="30" rx="3" fill="#a855f7" class="bar-anim" />
+      <text x="105" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#e2e8f0">+38%</text>
+    </g>
+  </g>
+
+  <!-- ================= FOREGROUND HERO CONTENT ================= -->
+  <!-- Centered, crisp text with dark contrast backplate ensuring 100% legibility -->
+  <g transform="translate(600, 120)">
+    <!-- Category Pill Badge -->
+    <g transform="translate(0, -50)">
+      <rect x="-170" y="0" width="340" height="30" rx="15" fill="#1e1b4b" fill-opacity="0.9" stroke="#6366f1" stroke-width="1.2" />
+      <circle cx="-146" cy="15" r="4" fill="#10b981" class="dot-ping" />
+      <text x="-132" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#c7d2fe" letter-spacing="1.2">INDUSTRY BENCHMARK • 2025–2026</text>
+    </g>
+
+    <!-- Main Title: Gradient AI REVENUE & HEADCOUNT LANDSCAPE -->
+    <text text-anchor="middle" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="900" fill="url(#textGrad)" letter-spacing="-0.5" filter="url(#softGlow)">
+      AI REVENUE &amp; HEADCOUNT
+    </text>
+    <text text-anchor="middle" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="800" fill="#ffffff" letter-spacing="3">
+      LANDSCAPE
+    </text>
+
+    <!-- Subtitle / Meta Description -->
+    <text text-anchor="middle" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15.5" font-weight="500" fill="#cbd5e1" letter-spacing="0.4">
+      Market Sizing • Labor Productivity • Silicon &amp; Infrastructure Economics
+    </text>
+
+    <!-- Sector Quick-Pills Row -->
+    <g transform="translate(0, 142)">
+      <!-- Pill 1: Agents -->
+      <g transform="translate(-240, 0)">
+        <rect x="-55" y="0" width="110" height="24" rx="12" fill="#0f172a" fill-opacity="0.95" stroke="#334155" stroke-width="1" />
+        <text text-anchor="middle" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">AI Agents</text>
+      </g>
+      <!-- Pill 2: Foundation Models -->
+      <g transform="translate(-115, 0)">
+        <rect x="-60" y="0" width="120" height="24" rx="12" fill="#0f172a" fill-opacity="0.95" stroke="#334155" stroke-width="1" />
+        <text text-anchor="middle" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Frontier Models</text>
+      </g>
+      <!-- Pill 3: Cloud IaaS -->
+      <g transform="translate(10, 0)">
+        <rect x="-55" y="0" width="110" height="24" rx="12" fill="#0f172a" fill-opacity="0.95" stroke="#334155" stroke-width="1" />
+        <text text-anchor="middle" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Cloud IaaS</text>
+      </g>
+      <!-- Pill 4: Compute & Hardware -->
+      <g transform="translate(130, 0)">
+        <rect x="-55" y="0" width="110" height="24" rx="12" fill="#0f172a" fill-opacity="0.95" stroke="#334155" stroke-width="1" />
+        <text text-anchor="middle" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">GPU &amp; Silicon</text>
+      </g>
+      <!-- Pill 5: Data Centers -->
+      <g transform="translate(250, 0)">
+        <rect x="-55" y="0" width="110" height="24" rx="12" fill="#0f172a" fill-opacity="0.95" stroke="#334155" stroke-width="1" />
+        <text text-anchor="middle" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Data Centers</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Border Frame -->
+  <rect width="1196" height="416" x="2" y="2" rx="15" fill="none" stroke="#334155" stroke-width="1.2" stroke-opacity="0.6" />
+</svg>
